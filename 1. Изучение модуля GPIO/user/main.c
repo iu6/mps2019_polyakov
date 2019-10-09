@@ -45,7 +45,7 @@ int main(void)
 	GPIO_user_ini.PORT_PULL_UP = PORT_PULL_UP_OFF;
 	PORT_Init(MDR_PORTC, &GPIO_user_ini);
 	
-  PORT_ResetBits(MDR_PORTC, PORT_Pin_0); 
+  	PORT_ResetBits(MDR_PORTC, PORT_Pin_0); 
 	PORT_ResetBits(MDR_PORTC, PORT_Pin_1); 
 	while(1)
 	{
@@ -63,19 +63,7 @@ int main(void)
 		PORT_ResetBits(MDR_PORTC, PORT_Pin_1);
 		delayTick(i);
 		PORT_SetBits(MDR_PORTC, PORT_Pin_1); // LED on
-	  PORT_ResetBits(MDR_PORTC, PORT_Pin_0);
+	  	PORT_ResetBits(MDR_PORTC, PORT_Pin_0);
 		delayTick(i);
-		/* PORT_SetBits(MDR_PORTC, PORT_Pin_0);
-		delayTick(i);
-		PORT_ResetBits(MDR_PORTC, PORT_Pin_0);
-		delayTick(i);
-		if ((i < 1000000) && (k == 0))
-			i = i + 200000;
-		else
-			k = 1;
-		if ((i > 100000) && (k == 1))
-			i = i - 200000;
-		else
-			k = 0; */
 	}
 }
